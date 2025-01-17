@@ -1,3 +1,14 @@
-<button>
+<button 
+(click)="submit()" 
+[class]="'btn ' + variant" 
+[disabled]="disabled"
+>
+
+    @if(!loading) {
+        {{ btnText}}
+    }@else {
+        <i class="fa fa-spinner fa-spin"></i> Carregando..
+    }
+
     
 </button>
