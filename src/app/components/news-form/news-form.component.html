@@ -1,7 +1,22 @@
-<form>
-    <label></label>
-    <input/>
-    <label></label>
-    <input/>
-    <btn-primary></btn-primary>
-</form>
+<section class="form-section">
+    <div class="text">
+        <h3>
+            Fique por dentro das tendencias.
+        </h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla temporibus quam ducimus! Ipsum ducimus perspiciatis reprehenderit maxime ad libero ex recusandae, hic similique explicabo delectus assumenda sint! Aut, neque rem!
+        </p>
+    </div>
+    <form [formGroup]="newLetterForm">
+        <label for="name">Nome:</label>
+        <input id="name" formControlName="name"/>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email"/>
+        <btn-primary
+        btnText="se inscreva" 
+        variant="secondary" 
+        (submit)="submit()"
+        [disabled]="!newLetterForm.valid" 
+        ></btn-primary>
+    </form>
+</section>
